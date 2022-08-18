@@ -1,0 +1,116 @@
+<html xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<head>
+ <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Registration</title>
+<STYLE type="text/css">
+.login-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 80px 40px 40px;
+   background: rgba(0,0,255,0.5);
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+.form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+ 
+  transform: skewX(-26deg);
+  transform-origin: bottom left;
+  border-radius: 10px;
+  pointer-events: none;
+}
+.form img {
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+  width: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+.form h3 {
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  color: white;
+  font-size: 20px
+}
+.submit-btn {
+  display: block;
+  margin:auto;
+  border: none;
+  outline: none;
+  background: #ff652f;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-content: center;
+  .form .input-group {
+  position: relative;
+}
+}
+</STYLE>
+</head>
+<body>
+<div class="login-wrapper">
+<h:form styleClass="form">
+<h3>SignIn Page</h3>
+<p>User Name<h:inputText value="#{compprof.uname}" id="uname" validatorMessage="Value is required" style="position:relative; width:100%; padding:10px 0; font-size: 1rem; letter-spacing: 1px; margin-bottom: 30px; border:none; border-bottom: 1px solid #fff; outline: none; background-color: transparent; color: inherit">
+  <f:validateRequired/>
+  </h:inputText>
+  <h:message for="uname" style="color:red"/>
+  </p>
+  <p>Location<h:inputText value="#{compprof.location}" id="location" validatorMessage="Value is required" style="position:relative; width:100%; padding:10px 0; font-size: 1rem; letter-spacing: 1px; margin-bottom: 30px; border:none; border-bottom: 1px solid #fff; outline: none; background-color: transparent; color: inherit">
+  <f:validateRequired/>
+  </h:inputText>
+  <h:message for="location" style="color:red"/>
+  </p>
+  <p>Number of Employees<h:inputText value="#{compprof.no_emp}" id="no_emp" validatorMessage="Value is required" style="position:relative; width:100%; padding:10px 0; font-size: 1rem; letter-spacing: 1px; margin-bottom: 30px; border:none; border-bottom: 1px solid #fff; outline: none; background-color: transparent; color: inherit">
+  <f:validateRequired/>
+  </h:inputText>
+  <h:message for="no_emp" style="color:red"/>
+  </p>
+  <p>Vacancies<h:inputText value="#{compprof.vacancies}" id="vacancies" validatorMessage="Value is required" style="position:relative; width:100%; padding:10px 0; font-size: 1rem; letter-spacing: 1px; margin-bottom: 30px; border:none; border-bottom: 1px solid #fff; outline: none; background-color: transparent; color: inherit">
+  <f:validateRequired/>
+  </h:inputText>
+  <h:message for="vacancies" style="color:red"/>
+  </p>
+  
+  <p>Working Experience Needed(yrs)<h:inputText value="#{compprof.workingexpreq}" id="workingexpreq" validatorMessage="Value is required" style="position:relative; width:100%; padding:10px 0; font-size: 1rem; letter-spacing: 1px; margin-bottom: 30px; border:none; border-bottom: 1px solid #fff; outline: none; background-color: transparent; color: inherit">
+  <f:validateRequired/>
+  </h:inputText>
+  <h:message for="workingexpreq" style="color:red"/>
+  </p>
+  <p>Skills required<h:inputText value="#{compprof.skillsreq}" id="skillsreq" validatorMessage="Value is required" style="position:relative; width:100%; padding:10px 0; font-size: 1rem; letter-spacing: 1px; margin-bottom: 30px; border:none; border-bottom: 1px solid #fff; outline: none; background-color: transparent; color: inherit">
+  <f:validateRequired/>
+  </h:inputText>
+  <h:message for="skillsreq" style="color:red"/>
+  </p>
+  
+  <b><h:commandButton action="#{compprof.insert()}" value="Update" id="button" styleClass="submit-btn"/></b>
+  
+  
+  <p style="font-size: 0.5cm; color: white;"><h:outputLabel value="#{compprof.response}" /></p>
+</h:form>
+</div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<HTML xmlns:h="http://java.sun.com/jsf/html">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+<HEAD>
+<STYLE type="text/css">
+
+body,h1,h2,h3,h4,h5,h6 {font-family: cursive;}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+   background-position: center;
+    background-size: cover;
+	color: #660000;
+	height: 200px;
+	background: rgb(2,0,36);
+background: rgb(11,3,143);
+background: rgba(255,255,255,255);
+	font-size: 24px;
+    min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</STYLE>
+<TITLE>JSF Program</TITLE>
+
+<SCRIPT type="text/javascript">
+
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</SCRIPT>
+
+</HEAD>
+<BODY>
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">CRS</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> CONNECT</a>
+     
+      <a href="beforereg.jsf" class="w3-bar-item w3-button">REGISTER</a>
+      <a href="beforelog.jsf" class="w3-bar-item w3-button">LOGIN</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  
+</div>
+
+
+<header class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-left" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Welcome to Corporate Recruitment Management Service</span><br/>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br/>
+    
+    <p><a href="#team" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Explore</a></p>
+  </div> 
+
+</header>
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">CONNECT TO TOP COMPANIES</h3>
+  <p class="w3-center w3-large">Explore different opportunities </p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://cdn.vox-cdn.com/thumbor/EztV1xYhsv2dshjljNxGJ7dLwMM=/0x0:2039x1359/1200x800/filters:focal(0x0:2039x1359)/cdn.vox-cdn.com/uploads/chorus_image/image/46957442/DSCF9158.0.0.jpg" alt="John" style="width:100%"/>
+        <div class="w3-container">
+          <h3>GOOGLE</h3>
+          
+          <p>Lot of opportunities in Google made you Best at work.</p>
+          <p>Vacancies : 8</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://cdn.vox-cdn.com/thumbor/jPc3uWXytcdIfG4PxBmqhxY75KM=/0x0:1000x666/1200x800/filters:focal(420x253:580x413)/cdn.vox-cdn.com/uploads/chorus_image/image/63709470/hp_building.0.1462603828.0.jpg" alt="Jane" style="width:100%"/>
+        <div class="w3-container">
+          <h3>HP</h3>
+          
+          <p>Booming Company for any Hardware service or software.</p>
+          <p>Vacancies : 12</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://techcrunch.com/wp-content/uploads/2013/07/intel.jpg" alt="Mike" style="width:100%"/>
+        <div class="w3-container">
+          <h3>INTEL</h3>
+          
+          <p>Largest Company that provides various Hardware connections.</p>
+          <p>Vacancies : 9</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://newsroompost.com/wp-content/uploads/2022/05/Untitled-design-2-56.jpg" alt="Dan" style="width:100%"/>
+        <div class="w3-container">
+          <h3>AMAZON</h3>
+          
+          <p>Largest company in the world that provides Cloud Services to Market.</p>
+          <p>Vacancies : 13</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</BODY>
+
+</HTML>
